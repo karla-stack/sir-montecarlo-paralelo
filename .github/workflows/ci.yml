@@ -1,0 +1,31 @@
+name: SIR Simulation CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install numpy matplotlib
+
+      - name: Run small validation (sequential)
+        run: |
+          cd sequential
+          python sir_sequential.py --validate
+
+      - name: Run small parallel test
+        run: |
+          cd parallel
+          python sir_parallel.py --cores 2 --size 50 --days 10 --out-csv ../results/ci_test.csv

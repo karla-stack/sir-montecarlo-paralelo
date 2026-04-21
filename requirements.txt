@@ -1,0 +1,4 @@
+numpy>=1.24
+matplotlib>=3.7
+# Opcional para animaciones MP4:
+# ffmpeg  → instalar con: apt install ffmpeg  /  brew install ffmpeg
