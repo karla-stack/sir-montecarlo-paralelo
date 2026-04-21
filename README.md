@@ -1,6 +1,6 @@
 # 🦠 Simulación Monte-Carlo SIR Paralela — Grilla 2D
 
-![CI](https://github.com/TU_USUARIO/sir-montecarlo-paralelo/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/karla-stack/sir-montecarlo-paralelo/actions/workflows/ci.yml/badge.svg)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 
 Simulación epidemiológica **SIR** (Susceptible–Infectado–Recuperado) sobre una grilla 2D de **1 000 × 1 000 celdas** (1 millón de personas) durante **365 días**, con versión secuencial y paralela usando descomposición de dominio con *ghost cells*.
@@ -37,7 +37,7 @@ sir-montecarlo-paralelo/
 ## ⚙️ Instalación
 
 ```bash
-git clone https://github.com/TU_USUARIO/sir-montecarlo-paralelo.git
+git clone https://github.com/karla-stack/sir-montecarlo-paralelo.git
 cd sir-montecarlo-paralelo
 pip install -r requirements.txt
 ```
